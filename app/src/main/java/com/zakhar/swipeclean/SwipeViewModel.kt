@@ -60,7 +60,7 @@ class SwipeViewModel(app: Application) : AndroidViewModel(app) {
         favDone = all.filter { store.map[it.id] == Decision.FAVORITED }.map { it.id }.toSet()
     }
 
-    fun setFilter(f: Filter) {
+    fun selectFilter(f: Filter) {
         if (f == filter) return
         filter = f
         history.clear()

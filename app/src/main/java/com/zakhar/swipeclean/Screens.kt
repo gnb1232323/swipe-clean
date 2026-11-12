@@ -275,7 +275,7 @@ fun SwipeScreen(vm: SwipeViewModel, onTrash: (List<List<Media>>) -> Unit) {
         }
         LazyRow(Modifier.padding(top = 10.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             items(Filter.entries.toList()) { f ->
-                FilterChip(selected = vm.filter == f, onClick = { vm.setFilter(f) }, label = { Text(f.label) })
+                FilterChip(selected = vm.filter == f, onClick = { vm.selectFilter(f) }, label = { Text(f.label) })
             }
         }
 
